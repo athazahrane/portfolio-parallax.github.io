@@ -128,7 +128,8 @@
         <div class="content">
             <div class="row content-experience">
                 <div class="col-md-6">
-                    <div class="card-content-experience border border-dark border-2 p-3 mt-3 rounded rounded-4 overflow-hidden">
+                    <div
+                        class="card-content-experience border border-dark border-2 p-3 mt-3 rounded rounded-4 overflow-hidden">
                         <h4 class="title-content-experience text-center">Frontend Development</h4>
                         <div class="row mt-4">
                             <div class="col-md-6 d-flex justify-content-center">
@@ -193,7 +194,8 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="card-content-experience border border-dark border-2 p-5 mt-3 rounded rounded-4 overflow-hidden">
+                    <div
+                        class="card-content-experience border border-dark border-2 p-5 mt-3 rounded rounded-4 overflow-hidden">
                         <h4 class="title-content-experience text-center">Backend Development</h4>
                         <div class="row mt-4">
                             <div class="col-md-6 d-flex justify-content-center">
@@ -248,30 +250,36 @@
         <h6 class="text-secondary text-center">Browse My Recent</h6>
         <h1 class="fw-bold text-center">Projects</h1>
         <div class="content-projects d-flex justify-content-center gap-4 mt-4 px-1">
-            <div class="card-project text-center my-1 border border-2 border-secondary p-4 rounded-4" style="max-width: 400px;">
+            <div class="card-project text-center my-1 border border-2 border-secondary p-4 rounded-4"
+                style="max-width: 400px;">
                 <img src="img/project-1.png" alt="" class="img-fluid rounded shadow">
                 <h3 class="fw-bold mt-3">Project One</h3>
                 <div class="button-project-card d-block mt-3">
                     <div class="btn btn-project rounded-pill my-1 border border-dark border-1 fw-bold px-4">Github</div>
-                    <div class="btn btn-project rounded-pill my-1 border border-dark border-1 fw-bold px-4">Live Demo</div>
+                    <div class="btn btn-project rounded-pill my-1 border border-dark border-1 fw-bold px-4">Live Demo
+                    </div>
                 </div>
-            </div>  
-            <div class="card-project text-center my-1 border border-2 border-secondary p-4 rounded-4" style="max-width: 400px;">
+            </div>
+            <div class="card-project text-center my-1 border border-2 border-secondary p-4 rounded-4"
+                style="max-width: 400px;">
                 <img src="img/project-2.png" alt="" class="img-fluid rounded shadow">
                 <h3 class="fw-bold mt-3">Project Two</h3>
                 <div class="button-project-card d-block mt-3">
                     <div class="btn btn-project rounded-pill my-1 border border-dark border-1 fw-bold px-4">Github</div>
-                    <div class="btn btn-project rounded-pill my-1 border border-dark border-1 fw-bold px-4">Live Demo</div>
+                    <div class="btn btn-project rounded-pill my-1 border border-dark border-1 fw-bold px-4">Live Demo
+                    </div>
                 </div>
-            </div>  
-            <div class="card-project text-center my-1 border border-2 border-secondary p-4 rounded-4" style="max-width: 400px;">
+            </div>
+            <div class="card-project text-center my-1 border border-2 border-secondary p-4 rounded-4"
+                style="max-width: 400px;">
                 <img src="img/project-1.png" alt="" class="img-fluid rounded shadow">
                 <h3 class="fw-bold mt-3">Project Three</h3>
                 <div class="button-project-card d-block mt-3">
                     <div class="btn btn-project rounded-pill my-1 border border-dark border-1 fw-bold px-4">Github</div>
-                    <div class="btn btn-project rounded-pill my-1 border border-dark border-1 fw-bold px-4">Live Demo</div>
+                    <div class="btn btn-project rounded-pill my-1 border border-dark border-1 fw-bold px-4">Live Demo
+                    </div>
                 </div>
-            </div>  
+            </div>
         </div>
     </section>
     <!-- akhir projects -->
@@ -283,27 +291,40 @@
         <h6 class="text-secondary text-center">Get In Touch</h6>
         <h1 class="fw-bold text-center">Contact Me</h1>
         <div class="content-contact">
-            <form action="">
+            <div class="alert alert-success alert-dismissible fade show d-none my-alert" role="alert">
+                <strong>Terima Kasih!</strong> Pesan anda sudah kami terima.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <form name="portfolio-contact-form">
                 <div class="mb-3">
                     <label for="username">Username</label>
-                    <input type="text" class="form-control" id="username" required>
+                    <input type="text" class="form-control" id="username" name="nama" required>
                 </div>
                 <div class="mb-3">
                     <label for="email">Email</label>
-                    <input type="email" class="form-control" id="email" required placeholder="example@gmail.com">
+                    <input type="email" class="form-control" id="email" name="email" required
+                        placeholder="example@gmail.com">
                 </div>
                 <div class="form-floating mb-3">
-                    <textarea class="form-control" placeholder="Put Your Comment Here" id="floatingTextarea2" style="height: 200px;"></textarea>
+                    <textarea class="form-control" placeholder="Put Your Comment Here" id="floatingTextarea2"
+                        name="pesan" style="height: 200px;"></textarea>
                     <label for="floatingTextarea2">Comments</label>
                 </div>
-                <div class="button d-flex">
-                    <button type="submit" class="btn btn-contact btn-primary">Submit</button>
+                <div class="button d-flex gap-1">
+                    <!-- button submit -->
+                    <button type="submit" class="btn btn-contact btn-primary btn-kirim">Submit</button>
+
+                    <!-- button loading -->
+                    <button class="btn btn-primary btn-loading d-none" type="button" disabled>
+                        <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+                        <span role="status">Loading...</span>
+                    </button>
                 </div>
             </form>
         </div>
     </section>
     <!-- akhir contact -->
-    
+
 
     <!-- footer -->
     <footer class="text-center" style="padding-top: 100px;">
@@ -316,8 +337,8 @@
         <p class="mt-4 fw-semibold text-secondary">copyright &copy; 2023 Elang Atha Zahran. All Rights Reserved</p>
     </footer>
     <!-- akhir footer -->
-    
-    
+
+
     <!-- bootstrap js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
@@ -328,6 +349,39 @@
 
     <!-- script js -->
     <script src="script.js"></script>
+
+    <!-- contact form -->
+    <script>
+        const scriptURL =
+            'https://script.google.com/macros/s/AKfycbyLNemphY1F5pSjHyZgMl7rePFI6qIitS23CEx8EhPKf9NGMfWwnO-boOVyViJRDNbKog/exec'
+        const form = document.forms['portfolio-contact-form']
+        const btnKirim = document.querySelector('.btn-kirim');
+        const btnLoading = document.querySelector('.btn-loading');
+        const myAlert = document.querySelector('.my-alert');
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            // ketika button submit di click
+            // Menampilkan button loading, menghilangkan button kirim
+            btnLoading.classList.toggle('d-none');
+            btnKirim.classList.toggle('d-none');
+            fetch(scriptURL, {
+                    method: 'POST',
+                    body: new FormData(form)
+                })
+                .then(response => {
+                     // Menampilkan button loading, menghilangkan button kirim
+                    btnLoading.classList.toggle('d-none');
+                    btnKirim.classList.toggle('d-none');
+                    // tampilkan alert
+                    myAlert.classList.toggle('d-none');
+                    // reset form
+                    form.reset();
+                    console.log('Success!', response);
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
 </body>
 
 </html>

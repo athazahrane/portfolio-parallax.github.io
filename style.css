@@ -185,12 +185,16 @@ textarea {
 }
 
 .btn-contact {
-    flex: 1;
+    flex: .1;
 }
 
 label::after {
     content: "*";
     color: red;
+}
+
+section.contact {
+    max-width: 600px;
 }
 
 /* breakpoints */
